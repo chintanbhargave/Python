@@ -14,7 +14,7 @@ def definition(ip):
     elif len(get_close_matches(ip, data.keys())) > 0:  # checking if given word has valid definition in the dataset
         val = input("Did you mean {} instead ? Press Y if yes and N if No: ".format(get_close_matches(ip, data.keys())[0])) #suggesting a similar word to user
         if val == 'Y' or val == 'y':
-            return data[get_close_matches(ip, data.keys())[0]]   # printing closeest similar word
+            return data[get_close_matches(ip, data.keys())[0]]   # printing closest word
         elif val == 'N' or val == 'n':
             return "The word doesn't exists "
         else:
@@ -27,7 +27,7 @@ word = input("Enter word for its definition: ")
 
 op = definition(word)
 
-if type(op) == list:  # if a word has multiple definitions then printing them on separate lines
+if type(op) == list:
     for i in op:
         print(i)
 else:
