@@ -1,3 +1,1 @@
-This code will create a webmap having three layers which will show coloured polygons on the basis of population, volcanoes in the USA sorted color wise on the basis of their elevation.
-
-There is also a control layer added to disable/enable any feature.
+This code will create a webmap having three layers which will show coloured polygons on the basis of population, volcanoes in the USA sorted color wise on the basis of their elevation and a control layer to disable/enable any layer as user wants.
