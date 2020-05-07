@@ -18,5 +18,7 @@ We can schedule the program in the task scheduler by :
     Conditions 
         uncheck start the task only if the computer is on AC power    
 
-Run using cmd as administrator        
+Run using cmd as administrator.
+
+Task Manager can be used to track the program is running or not.
 
