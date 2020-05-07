@@ -24,7 +24,9 @@ for lt,ln,nm,el in zip(lat,lon,name,elev):
     f.add_child(folium.CircleMarker(location = [lt,ln], radius=8, popup=str(el)+"\n"+nm, fill_color = color(el), color="grey", fill_opacity=0.7))
 
 #  To add polygons GeoJson is used. polygon coordinates are in the worldpop.json
-f.add_child(folium.GeoJson(data=open("worldpop.json", 'r', encoding='utf-8-sig').read()))
+f.add_child(folium.GeoJson(data=open('worldpop.json', 'r', encoding='utf-8-sig').read(),
+style_function=lambda x: {'fillColor':'green' if x['properties']['POP2005'] < 10000000
+else 'orange' if 10000000 <= x['properties']['POP2005'] < 20000000 else 'red'}))
 
 map.add_child(f)
 map.save("BasicMap.html")
