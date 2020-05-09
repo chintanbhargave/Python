@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 #  Instantiating
 app = Flask(__name__)
@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def fn():
-    return " This is Homepage"
+    return render_template("home.html")
 
 @app.route('/content/')
 def con():
-    return " Hello, This is content page"    
+    return render_template("content.html")
 
 if __name__ == "__main__":
     app.run(debug=True)    
