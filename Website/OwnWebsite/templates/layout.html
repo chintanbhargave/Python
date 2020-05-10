@@ -2,7 +2,7 @@
 <html>
   <head>
       <title>Flask App</title>
-      <link rel="stylesheet" href="{<200c>{url_for('static',filename='css/main.css')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
   </head>
   <body>
     <header>
@@ -10,8 +10,8 @@
         <h1 class="logo">My web app</h1>
         <strong><nav>
           <ul class="menu">
-            <li><a href="{<200c>{ url_for('home') }}">Home</a></li>
-            <li><a href="{<200c>{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('fn') }}">Home</a></li>
+            <li><a href="{{ url_for('cont') }}">About</a></li>
           </ul>
         </nav></strong>
       </div>
