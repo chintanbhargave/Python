@@ -50,5 +50,3 @@ def update(id,title,author,year,isbn):
     con.close()
 
 connect()
- 
-print(view())
