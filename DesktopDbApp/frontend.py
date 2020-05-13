@@ -1,5 +1,7 @@
 from tkinter import *
-import backend
+from backend import Database
+
+database = Database()
 
 def get_selected_row(event):
     try:
@@ -21,28 +23,28 @@ def get_selected_row(event):
     
 def view_data():
     list1.delete(0,END)
-    for row in backend.view():
+    for row in database.view():
         list1.insert(END,row)
 
 
 def search_data():
     list1.delete(0,END)
-    for row in backend.search(title_val.get(),author_val.get(),year_val.get(),isbn_val.get()):
+    for row in database.search(title_val.get(),author_val.get(),year_val.get(),isbn_val.get()):
         list1.insert(END,row)
 
 
 def add_data():
-    backend.insert(title_val.get(),author_val.get(),year_val.get(),isbn_val.get())
+    database.insert(title_val.get(),author_val.get(),year_val.get(),isbn_val.get())
     list1.delete(0,END)
     list1.insert(END,(title_val.get(),author_val.get(),year_val.get(),isbn_val.get()))
 
 
 def delete_data():
-    backend.delete(selected_tuple[0])
+    database.delete(selected_tuple[0])
 
 
 def update_data():
-    backend.update(selected_tuple[0], title_val.get(), author_val.get(), year_val.get(), isbn_val.get())
+    database.update(selected_tuple[0], title_val.get(), author_val.get(), year_val.get(), isbn_val.get())
 
 
 
