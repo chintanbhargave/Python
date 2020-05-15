@@ -1,0 +1,1 @@
+This folder consists of code which reads a img, resizes it and detects if there is face present in the image or not and if present then draws a rectangle around the face.
