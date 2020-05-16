@@ -1,0 +1,1 @@
+This code loads a image using opencv library and then various operations are performed on the image data using numpy functionalities.
