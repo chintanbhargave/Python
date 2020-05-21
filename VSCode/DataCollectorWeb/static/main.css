@@ -34,9 +34,13 @@ html, body{
     background-color: steelblue;
     margin: 3px;
 }
-
 .container p{
     margin: 100px;
     color: cyan;
     font-size: 20px;
+}
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:#B22222;
 }

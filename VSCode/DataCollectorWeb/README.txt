@@ -1,0 +1,2 @@
+Following website is built using flask and the postgresql is used for backend. SQLAlchemy library is used for the database connection and operations.
+User have to enter email address and their height and after submitting these information

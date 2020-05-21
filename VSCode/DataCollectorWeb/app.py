@@ -12,8 +12,8 @@ class Data(db.Model):
     height_ = db.Column(db.Integer)
 
     def __init__(self,email_,height_):
-        self.email = email_
-        self.height = height_
+        self.email_= email_
+        self.height_= height_
             
 
 @app.route("/")
@@ -26,7 +26,12 @@ def success():
         email = request.form["email_name"]
         height = request.form["height_name"]
         #print(email,height)
-        return render_template("success.html")
+        if db.session.query(Data).filter(Data.email_==email).count() == 0:
+            d = Data(email,height)
+            db.session.add(d)
+            db.session.commit()
+            return render_template("success.html")
+    return  render_template("index.html", text="This email address is already registered please enter a new one!!")       
 
 
 if __name__ == "__main__":
