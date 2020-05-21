@@ -1,2 +1,2 @@
 Following website is built using flask and the postgresql is used for backend. SQLAlchemy library is used for the database connection and operations.
-User have to enter email address and their height and after submitting these information
+User have to enter email address and height. After submitting these information user will receive an email(entered on website) about the average height of all the people that had used this website.
