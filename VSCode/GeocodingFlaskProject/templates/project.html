@@ -1,17 +1,22 @@
+
 <!DOCTYPE html>
-<html>
- <title>MY PROJECT</title>
- <head>
-    <link href="../static/des.css" rel=stylesheet>
- </head>
- <body>
+<html lang="en">
+<title> SUPER GEOCODER </title>
+<head>
+  <link href="../static/des.css" rel="stylesheet">
+</head>
+  <body>
     <div class="myclass">
-        <h1>SUPER GEOCODER</h1> 
-        <h3>Please upload your CSV file below. The values containing addresses sholud be in a column name address or Address.</h3>  
-        <form>
-            <input type="file" name="myfile" enctype="multipart/form-data"><br>
-            <button type="submit">Submit</button>
+      <h1>Super Geocoder</h1>
+      <h3>Please upload your CSV file. The values containing addresses should be in a column named <em>address</em> or <em>Address</em></h3>
+        <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+          <input type="file" accept=".csv" name="myfile" /><br>
+          <button type="submit"> Submit </button>
         </form>
-    </div>
- </body>
+      <div class="output">
+        {{text|safe}}
+        {% include [btn] ignore missing %}
+      </div>
+  </div>
+  </body>
 </html>
