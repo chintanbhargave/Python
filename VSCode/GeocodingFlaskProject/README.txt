@@ -1,0 +1,2 @@
+This project a website is built using Flask, on which we have to upload a csv file which has the address of any location. Then app takes this address and obtains the latitude and longitude of that address using geopy.
+Then this latitude and longitude along with the location address is store in another csv file renamed with current time. This file is made available to the user for downloading. User can download this file by presssing download button. 
